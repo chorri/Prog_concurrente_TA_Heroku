@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>TA Programación concurrente</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="codemirror/lib/codemirror.js"></script>
+        <link href="codemirror/lib/codemirror.css" rel="stylesheet">
+        <script src="codemirror/mode/xml/xml.js"></script>
+        <script src="codemirror/addon/edit/closetag.js"></script>
+        <script src="codemirror/addon/edit/matchbrackets.js"></script>
+        <script src="codemirror/addon/edit/closebrackets.js"></script>
+        <link href="codemirror/theme/dracula.css" rel="stylesheet">
+        <script src="codemirror/addon/fold/foldcode.js"></script>
+        <script src="codemirror/addon/search/jump-to-line.js"></script>
+        <script src="codemirror/addon/selection/active-line.js"></script>
+
+        
+    </head>
+    <body style="background-color:#dbda8a;">
+        <h1 style="text-align:center;font-size: 48px">Editor de texto colaborativo</h1>
+        <ul style="font-size: 28px">
+            <li>Cavero, Hamill</il>
+            <li>Costa, Juan</li>
+            <li>Moscol, Adrián</li>
+        </ul>
+        <textarea title="textarea" name="textarea" id="editor">Soy un cuadro de texto.</textarea>
+        <script >
+            var editor=CodeMirror.fromTextArea(
+                document.getElementById('editor'),{
+                mode:"xml",
+                theme:"dracula",
+                lineNumbers:true,
+                autoCloseTags:true,
+                matchBrackets:true,
+                autoCloseBrackets:true,
+                foldCode:true,
+                jumpToLine:true,
+                styleActiveLine :true
+            });
+            editor.setSize("Width","500");
+        </script>
+    </body>
+</html>
